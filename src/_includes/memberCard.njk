@@ -1,0 +1,22 @@
+<ul class="grid-list">
+
+  {%- for membcard in collections.membcard -%}
+    <li class ="team__memb">
+      <div class="pricing-card">
+
+        <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+          <img src="{{membcard.data.image}}" width="90" height="90" alt="{{membcard.data.name}}"
+            class="img-cover">
+        </figure>
+
+        <div class="wrapper">
+          <h3 class="h3 card-title">{{membcard.data.name}}</h3>
+
+          <p class="card-text">{{membcard.data.description}}</p>
+        </div>
+
+      </div>
+    </li>
+  {%- endfor -%}
+</ul>
+
